@@ -11,7 +11,11 @@ Recursive formulation
 Let F(index,i,S) denotes the number of ways in which we can obtain weight[i] using weights from weight[index], weight[index+1], weight[index+2],..., weight[n-1] and currently because of choosing some weights from weight[0], weight[1],..., weight[index-1] the sum of the weights has become S. So we need to achieve weight[i]-S by choosing some weights from weight[index], weight[index+1],..., weight[n-1].
 
 A pseudo code would look like:
+
 F(index,i,S) = F(index+1,i,S) If index=i
+
 = 1 If index=N and S=weight[i]
+
 = 0 If index=N and S!=weight[i]
+
 = F(index+1,i,S+weight[index])+F(index+1,i,S) otherwise 
