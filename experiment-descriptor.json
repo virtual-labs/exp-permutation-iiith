@@ -40,14 +40,14 @@
       "label": "Simulation",
       "unit-type": "task",
       "content-type": "simulation"
-    }
+    },
     {
       "target": "posttest.html",
       "source": "posttest.json",
       "label": "Posttest",
       "unit-type": "task",
       "content-type": "assesment"
-    },
+    }
   ]
 }
 
