@@ -1,1 +1,1 @@
-To learn to solve problems related to Permutation using Computer Programming. 
+- To learn to solve problems related to Permutation using Computer Programming. 
