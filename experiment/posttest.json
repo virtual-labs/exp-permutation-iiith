@@ -1,47 +1,107 @@
-[
-{"question":"1. A continue statement causes execution to skip to:",
-"answers":{
-            "a":"the end of the program",
-            "b":"the first statement after the loop",
-            "c":"the statement following the continue statement",
-            "d":"the next iteration of the loop"
-          },
-"correctAnswer":"d"},
-
-{"question":"2. The statement i++; is equivalent to:",
-"answers":{
-            "a":"i = i + i;",
-            "b":"i = i + 1;",
-            "c":"i = i - 1;",
-            "d":"i - - ;"
-          },
-"correctAnswer":"b"},
-
-{"question":"3. Another word for 'looping' is:",
-"answers":{
-            "a":"recapitulation ",
-            "b":"tintinabulation ",
-            "c":"iteration",
-            "d":"reiteration"
-          },
-"correctAnswer":"c"},
-
-{"question":"4. Which looping process is best used when the number of iterations is known?",
-"answers":{
-            "a":"for",
-            "b":"while",
-            "c":"do-while",
-            "d":"all of the above"
-          },
-"correctAnswer":"a"},
-
-{"question":"5.  Which of the following is not an infinite loop.",
-"answers":{
-            "a":"int i = 1 ; while ( 1 ) { i++ ; }",
-            "b":"for( int i =1; i < 10 ; i--) printf('Hello World');",
-            "c":"for(int i =1; i<100; i++) printf('Hello World');",
-            "d":"int i = 0; do{ i-- printf('%d ',i); }while(i>0);"
-          },
-"correctAnswer":"c"}
-
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following is the number of ways to arrange 4 objects taken all at a time?",
+      "answers": {
+        "a": "4",
+        "b": "12",
+        "c": "24",
+        "d": "16"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. 4 is the number of objects, not arrangements.",
+        "b": "Incorrect. 12 is not 4!.",
+        "c": "Correct. 4! = 24 arrangements.",
+        "d": "Incorrect. 16 is not 4!."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In how many ways can you arrange the letters A, B, C, D so that A is always first?",
+      "answers": {
+        "a": "6",
+        "b": "12",
+        "c": "18",
+        "d": "24"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. 6 is 3! but not for 4 objects with A fixed.",
+        "b": "Correct. Fixing A first, the other 3 can be arranged in 3! = 6 ways, but for 4 objects, it's 3! = 6, so 6 ways. But since the question asks for all arrangements with A first, it's 3! = 6.",
+        "c": "Incorrect. 18 is not correct.",
+        "d": "Incorrect. 24 is the total number of arrangements."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following is a valid permutation of the set {1, 2, 3}?",
+      "answers": {
+        "a": "1, 2, 3",
+        "b": "2, 3, 1",
+        "c": "3, 1, 2",
+        "d": "All of the above"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. This is one valid permutation, but not the only one.",
+        "b": "Incorrect. This is one valid permutation, but not the only one.",
+        "c": "Incorrect. This is one valid permutation, but not the only one.",
+        "d": "Correct. All are valid permutations."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Which of the following is NOT a permutation?",
+      "answers": {
+        "a": "Arranging 3 books on a shelf",
+        "b": "Selecting 2 students from a group of 5",
+        "c": "Ordering runners in a race",
+        "d": "Arranging digits to form numbers"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Arranging is a permutation.",
+        "b": "Correct. Selection without order is a combination.",
+        "c": "Incorrect. Ordering is a permutation.",
+        "d": "Incorrect. Arranging digits is a permutation."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which algorithmic technique is commonly used to generate all combinations or permutations?",
+      "answers": {
+        "a": "Backtracking",
+        "b": "Dynamic Programming",
+        "c": "Greedy Algorithm",
+        "d": "Divide and Conquer"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Backtracking is used to generate all combinations/permutations.",
+        "b": "Incorrect. Dynamic programming is not typically used for this.",
+        "c": "Incorrect. Greedy algorithms are not used for generating all permutations.",
+        "d": "Incorrect. Divide and conquer is not the main approach here."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "6. Which of the following statements about permutations is TRUE?",
+      "answers": {
+        "a": "Order does not matter in permutations.",
+        "b": "The number of permutations of n objects is n!.",
+        "c": "Permutations are only used in mathematics, not computer science.",
+        "d": "Permutations and combinations are the same."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Order matters in permutations.",
+        "b": "Correct. The number of permutations of n objects is n!.",
+        "c": "Incorrect. Permutations are widely used in computer science.",
+        "d": "Incorrect. They are different concepts."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

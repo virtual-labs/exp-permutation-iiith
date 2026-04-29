@@ -1,47 +1,124 @@
-[
-{"question":"1. The execution of a loop typically starts with:",
-"answers":{
-            "a":"initialization statements",
-            "b":"Loop body",
-            "c":"test condition",
-            "d":"update statements"
-          },
-"correctAnswer":"a"},
-
-{"question":"2. The break statement is used to exit from:",
-"answers":{
-            "a":"an if statement",
-            "b":"a for loop",
-            "c":"a program",
-            "d":"the main( ) function"
-          },
-"correctAnswer":"b"}, 
-
-{"question":"3. A do-while loop is useful when we want that the statements within the loop must be executed",
-"answers":{
-            "a":"only once",
-            "b":"At Least Once",
-            "c":"More than once",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"},
-
-{"question":"4. In what sequence the initialization, testing and execution of body is done in a do-while loop ",
-"answers":{
-            "a":"Initialization, execution of body, testing",
-            "b":"Execution of body, initialization, testing",
-            "c":"Initialization, testing, execution of body",
-            "d":"None of the above"
-          },
-"correctAnswer":"a"},
-
-{"question":"5. Which looping process checks the test condition at the end of the loop?",
-"answers":{
-            "a":"for",
-            "b":"while",
-            "c":"do-while",
-            "d":"No looping peocess check condition at the end"
-          },
-"correctAnswer":"c"}
-
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is a permutation?",
+      "answers": {
+        "a": "A selection of objects where order matters",
+        "b": "A selection of objects where order does not matter",
+        "c": "A type of sorting algorithm",
+        "d": "A way to balance weights"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In permutations, the order of objects is important.",
+        "b": "Incorrect. That describes combinations.",
+        "c": "Incorrect. Permutations are not sorting algorithms.",
+        "d": "Incorrect. Permutations are not specifically about balancing weights."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. How many permutations are there of 3 distinct objects?",
+      "answers": {
+        "a": "3",
+        "b": "6",
+        "c": "9",
+        "d": "12"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. 3 is the number of objects, not permutations.",
+        "b": "Correct. 3! = 6 permutations.",
+        "c": "Incorrect. 9 is not the number of permutations for 3 objects.",
+        "d": "Incorrect. 12 is not correct for 3 objects."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What is the value of 4! (4 factorial)?",
+      "answers": {
+        "a": "10",
+        "b": "16",
+        "c": "24",
+        "d": "32"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. 4! = 4 × 3 × 2 × 1 = 24.",
+        "b": "Incorrect. 4! = 24, not 16.",
+        "c": "Correct. 4! = 24.",
+        "d": "Incorrect. 32 is not the value of 4!."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following is a combination, not a permutation?",
+      "answers": {
+        "a": "Arranging books on a shelf",
+        "b": "Selecting a committee from a group",
+        "c": "Ordering runners in a race",
+        "d": "Arranging digits to form numbers"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Arranging is a permutation.",
+        "b": "Correct. Selection without order is a combination.",
+        "c": "Incorrect. Ordering is a permutation.",
+        "d": "Incorrect. Arranging digits is a permutation."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. In how many ways can you arrange the letters A, B, and C so that B is always first?",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "6"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. There are more than one way.",
+        "b": "Correct. Fixing B first, the other two can be arranged in 2 ways.",
+        "c": "Incorrect. 3 is the number of objects.",
+        "d": "Incorrect. 6 is the total number of permutations."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which recursive approach is commonly used to generate all permutations of a set?",
+      "answers": {
+        "a": "Backtracking",
+        "b": "Dynamic Programming",
+        "c": "Greedy Algorithm",
+        "d": "Divide and Conquer"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Backtracking is used to generate all permutations.",
+        "b": "Incorrect. Dynamic programming is not typically used for this.",
+        "c": "Incorrect. Greedy algorithms are not used for generating all permutations.",
+        "d": "Incorrect. Divide and conquer is not the main approach here."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. Which of the following statements about permutations is TRUE?",
+      "answers": {
+        "a": "Order does not matter in permutations.",
+        "b": "The number of permutations of n objects is n!.",
+        "c": "Permutations are only used in mathematics, not computer science.",
+        "d": "Permutations and combinations are the same."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Order matters in permutations.",
+        "b": "Correct. The number of permutations of n objects is n!.",
+        "c": "Incorrect. Permutations are widely used in computer science.",
+        "d": "Incorrect. They are different concepts."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
