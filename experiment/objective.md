@@ -1,1 +1,5 @@
-- To learn to solve problems related to Permutation using Computer Programming. 
+- To understand and identify permutations and combinations and their mathematical properties.
+- To develop algorithms for generating and counting permutations and combinations efficiently using programming.
+- To apply recursive and combinatorial thinking to solve balancing and arrangement problems.
+- To strengthen analytical and computational skills by solving permutation-based problems through code.
+- To appreciate the role of permutations in computer science, especially in algorithm design and problem solving.
