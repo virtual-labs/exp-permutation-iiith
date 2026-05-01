@@ -1,19 +1,51 @@
-**Problem 1**
+Permutations are a fundamental concept in mathematics and computer science, especially in problem solving. A **permutation** is an arrangement of objects in a specific order. Whenever the order of objects matters, we use permutations.
 
-Recursion can be applied to a problem if the problem for the given input can be expressed as dependent upon the solution of the same problem for simpler inputs. One has to hardcode the solution for some simple cases, so that this recursion does not go on endlessly. Now, the given problem of expressing a weight(W) as a sum of other weights can be expressed as the problem of choosing one weight(w) such that it is not greater than W and then solving the same problem for the remaining weight W-w. For this particular problem, the solution can be expressed easily by choosing all the weight(w) as the first weights one by one, also taking care the the total weight(S) is not greater than reqired weight W. Those weights which make the total weight(S) greater than W are exluded from the list of avaliable weights for the next recursive. Now we only have to solve the same problem for a simpler case to get the complete solution, i.e., solving the same problem for the remaining weight, W-w, and available pool of weights now also does not have w. If accumulated weight is equal to w, then we increment the counter. If at any time, the pool of remaining weights is exhausted, then that attempt is aborted. So, our recursion function would be needing 2 variables, one containing the list of available weights and the other signifying remaining weight to be accrued.  
+### What is a Permutation?
 
+Suppose you have 5 colored balls labeled 1, 2, 3, 4, and 5:
 
-**Problem 2**
+<div align="center">
+<img src="./images/experiment-image.png" alt="Permutation of colored balls" width="350"/>
+<br><small>Figure: Five colored balls labeled 1, 4, 3, 2, 5 (one possible arrangement).</small>
+</div>
 
-For each weight in the input we keep it on right pan and try using other weights to balance it. Let us say we have kept ith weight on the right pan, out task is now to keep weights on left side of the pan so that the sum of the weights on left side of the pan is equal to the weight on the right side,i.e weight[i]. For each weight W[k], we can keep it either on left pan or we donot to keep it at all. Make sure to disregard the weight when k is equal to i because that weight is already on right side.  
+Each unique way of arranging these balls in a row is a permutation. For example, the arrangements (1, 2, 3, 4, 5) and (5, 4, 3, 2, 1) are different permutations.
 
+### Counting Permutations
 
-**Recursive formulation**  
+- The number of ways to arrange $n$ distinct objects is $n!$ (read as "n factorial").
+- $n! = n \times (n-1) \times (n-2) \times \ldots \times 1$
 
-Let F(index,i,S) denotes the number of ways in which we can obtain weight[i] using weights from weight[index], weight[index+1], weight[index+2],..., weight[n-1] and currently because of choosing some weights from weight[0], weight[1],..., weight[index-1] the sum of the weights has become S. So we need to achieve weight[i]-S by choosing some weights from weight[index], weight[index+1],..., weight[n-1].  
+**Example:**  
+For 3 balls (A, B, C), the permutations are:
 
-A pseudo code would look like:  
-F(index,i,S) = F(index+1,i,S) If index=i  
-= 1 If index=N and S=weight[i]  
-= 0 If index=N and S!=weight[i]  
-= F(index+1,i,S+weight[index])+F(index+1,i,S) otherwise   
+- A, B, C
+- A, C, B
+- B, A, C
+- B, C, A
+- C, A, B
+- C, B, A
+
+There are $3! = 6$ permutations.
+
+### Permutations of r Objects from n
+
+Sometimes, we want to arrange only $r$ objects out of $n$. The number of such arrangements is:
+
+$$
+P(n, r) = \frac{n!}{(n-r)!}
+$$
+
+### Permutations with Repetition
+
+If some objects are identical, the formula changes. For example, the word "LEVEL" has repeated letters. The number of distinct arrangements is:
+
+$$
+	ext{Total} = \frac{n!}{p_1! \times p_2! \times \ldots}
+$$
+
+where $p_1, p_2, \ldots$ are the counts of each repeated object.
+
+---
+
+Permutations are used in many areas, such as algorithm design, cryptography, and combinatorial problem solving. Understanding permutations helps you solve problems where the arrangement or order of items is important.
