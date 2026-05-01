@@ -1,49 +1,51 @@
-Permutations and combinations are fundamental concepts in mathematics and computer science. They help us count, arrange, and analyze different ways objects can be ordered or selected. These ideas are not only important in theory but also have practical applications in algorithm design, cryptography, and problem solving.
+Permutations are a fundamental concept in mathematics and computer science, especially in problem solving. A **permutation** is an arrangement of objects in a specific order. Whenever the order of objects matters, we use permutations.
 
----
+### What is a Permutation?
 
-### What are Permutations?
-
-A **permutation** is an arrangement of objects in a specific order. For example, the different ways to arrange the numbers 1, 2, and 3 are:
-
-- 1, 2, 3
-- 1, 3, 2
-- 2, 1, 3
-- 2, 3, 1
-- 3, 1, 2
-- 3, 2, 1
-
-Permutations are used whenever the order of objects matters. The number of permutations of $n$ distinct objects is $n!$ (n factorial).
-
-Permutations can be visualized as arranging colored balls in a row, as shown below:
+Suppose you have 5 colored balls labeled 1, 2, 3, 4, and 5:
 
 <div align="center">
 <img src="./images/experiment-image.png" alt="Permutation of colored balls" width="350"/>
-<br><small>Figure: One possible permutation (arrangement) of five colored balls labeled 1, 4, 3, 2, 5.</small>
+<br><small>Figure: Five colored balls labeled 1, 4, 3, 2, 5 (one possible arrangement).</small>
 </div>
 
+Each unique way of arranging these balls in a row is a permutation. For example, the arrangements (1, 2, 3, 4, 5) and (5, 4, 3, 2, 1) are different permutations.
+
+### Counting Permutations
+
+- The number of ways to arrange $n$ distinct objects is $n!$ (read as "n factorial").
+- $n! = n \times (n-1) \times (n-2) \times \ldots \times 1$
+
+**Example:**  
+For 3 balls (A, B, C), the permutations are:
+
+- A, B, C
+- A, C, B
+- B, A, C
+- B, C, A
+- C, A, B
+- C, B, A
+
+There are $3! = 6$ permutations.
+
+### Permutations of r Objects from n
+
+Sometimes, we want to arrange only $r$ objects out of $n$. The number of such arrangements is:
+
+$$
+P(n, r) = \frac{n!}{(n-r)!}
+$$
+
+### Permutations with Repetition
+
+If some objects are identical, the formula changes. For example, the word "LEVEL" has repeated letters. The number of distinct arrangements is:
+
+$$
+	ext{Total} = \frac{n!}{p_1! \times p_2! \times \ldots}
+$$
+
+where $p_1, p_2, \ldots$ are the counts of each repeated object.
+
 ---
 
-### Permutations and Balancing Problems
-
-Permutations and combinations are especially useful in balancing and arrangement problems. For example, in the classic problem of balancing weights on a scale, you may need to consider all possible ways to arrange or select weights to achieve balance. This requires both combinatorial reasoning and algorithmic thinking.
-
----
-
-In this experiment, you will solve two main problems that require permutations, combinations, and recursive thinking:
-
-### 1. Balancing a Given Sum
-
-**Task:** Given a set of unique weights and a target sum, determine in how many ways you can balance the sum using one or more weights. Each arrangement is counted only once, regardless of which side the weights are placed on.
-
-**Hint:** Use combinations and recursive algorithms to explore all possible ways to achieve the target sum.
-
-### 2. Balancing with a Single Weight on One Side
-
-**Task:** Given a set of weights, count the number of ways to balance the scale such that only one weight is on the right side and any combination of the remaining weights is on the left side.
-
-**Hint:** For each weight, try placing it on the right and use combinations of the others on the left to achieve balance.
-
----
-
-By mastering these techniques, you will be able to solve a wide range of combinatorial and algorithmic problems. The skills you learn here are foundational for advanced topics in mathematics, computer science, and competitive programming.
+Permutations are used in many areas, such as algorithm design, cryptography, and combinatorial problem solving. Understanding permutations helps you solve problems where the arrangement or order of items is important.
