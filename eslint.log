@@ -1,0 +1,21 @@
+
+/home/runner/work/exp-permutation-iiith/exp-permutation-iiith/experiment/simulation/js/main.js
+  143:35   warning  Unnecessary escape character: \"  no-useless-escape
+  143:48   warning  Unnecessary escape character: \"  no-useless-escape
+  143:62   warning  Unnecessary escape character: \"  no-useless-escape
+  143:75   warning  Unnecessary escape character: \"  no-useless-escape
+  143:90   warning  Unnecessary escape character: \"  no-useless-escape
+  143:112  warning  Unnecessary escape character: \"  no-useless-escape
+  147:46   warning  Unnecessary escape character: \"  no-useless-escape
+  147:61   warning  Unnecessary escape character: \"  no-useless-escape
+  176:36   warning  Unnecessary escape character: \"  no-useless-escape
+  176:42   warning  Unnecessary escape character: \"  no-useless-escape
+  187:31   warning  Unnecessary escape character: \"  no-useless-escape
+  187:49   warning  Unnecessary escape character: \"  no-useless-escape
+  189:31   warning  Unnecessary escape character: \"  no-useless-escape
+  189:51   warning  Unnecessary escape character: \"  no-useless-escape
+  196:19   warning  Unnecessary escape character: \"  no-useless-escape
+  196:41   warning  Unnecessary escape character: \"  no-useless-escape
+
+✖ 16 problems (0 errors, 16 warnings)
+

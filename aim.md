@@ -1,0 +1,1 @@
+To explore and understand the mathematical principles and computational techniques of permutations and combinations through problem solving, algorithm design, and programming, with a focus on their applications in balancing and arrangement problems.
