@@ -23,6 +23,7 @@ const problems = [
     hints: [
       "What should result be initialized to for multiplication?",
       "Which operator multiplies result by i?",
+      "For n=4, output is 24. For n=3, output is 6.",
     ],
     compilerOutput: "Compiled successfully.",
     runtimeOutput: "For n=4, output is 24. For n=3, output is 6.",
@@ -55,6 +56,7 @@ const problems = [
     hints: [
       "How do you calculate the denominator for (n-r)! ?",
       "How do you compute n! divided by (n-r)! ?",
+      "For n=5, r=3, output is 60. For n=4, r=2, output is 12.",
     ],
     compilerOutput: "Compiled successfully.",
     runtimeOutput: "For n=5, r=3, output is 60. For n=4, r=2, output is 12.",
@@ -82,6 +84,7 @@ const problems = [
     hints: [
       "How do you calculate the factorial for repeated letters?",
       "What operator do you use to multiply denom by i?",
+      "Output is 30.",
     ],
     compilerOutput: "Compiled successfully.",
     runtimeOutput: "Output is 30.",
@@ -108,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   problemSelect.onchange = () => loadProblem(problemSelect.value);
   submitBtn.onclick = checkAnswers;
   runBtn.onclick = showRuntimeOutput;
-  hintLevelSelect.onchange = () => showHints(+hintLevelSelect.value);
+  hintLevelSelect.onchange = (e) => showHints(+e.target.value);
 });
 
 function populateProblemDropdown() {
@@ -162,6 +165,7 @@ function renderHints() {
     hintLevelSelect.innerHTML += `<option value="${i}">Hint ${i}</option>`;
   }
   showHints(0);
+  hintLevelSelect.onchange = (e) => showHints(+e.target.value);
 }
 
 function showHints(level) {
@@ -169,7 +173,7 @@ function showHints(level) {
     hintsDiv.innerHTML = "";
     return;
   }
-  hintsDiv.innerHTML = `<div class="hint">${currentProblem.hints[level - 1]}</div>`;
+  hintsDiv.innerHTML = `<div class=\"hint\">${currentProblem.hints[level - 1]}</div>`;
 }
 
 function checkAnswers() {
@@ -178,22 +182,27 @@ function checkAnswers() {
   currentProblem.userInputs =
     currentProblem.userInputs || Array(currentProblem.blanks.length).fill("");
   currentProblem.blanks.forEach((blank, i) => {
-    const userVal = (currentProblem.userInputs[i] || "").replace(/\s+/g, "");
-    const correct = blank.answers.some(
-      (a) => userVal === a.replace(/\s+/g, ""),
-    );
-    if (correct) {
-      feedback += `<div class="feedback-correct">Blank ${i + 1}: Correct</div>`;
+    const userVal = (currentProblem.userInputs[i] || "").trim();
+    if (blank.answers.map((a) => a.trim()).includes(userVal)) {
+      feedback += `<div class=\"feedback-correct\">Blank ${i + 1}: Correct</div>`;
     } else {
-      feedback += `<div class="feedback-incorrect">Blank ${i + 1}: Incorrect</div>`;
+      feedback += `<div class=\"feedback-incorrect\">Blank ${i + 1}: Incorrect</div>`;
       allCorrect = false;
     }
   });
   feedbackDiv.innerHTML = feedback;
-  compileSuccess = allCorrect;
-  runBtn.disabled = !allCorrect;
+  if (allCorrect) {
+    feedbackDiv.innerHTML +=
+      '<div class=\"feedback-all-correct\">All blanks correct! You can now run the code.</div>';
+    compileSuccess = true;
+    runBtn.disabled = false;
+  } else {
+    runBtn.disabled = true;
+  }
 }
 
 function showRuntimeOutput() {
-  runtimeOutputDiv.innerHTML = `<div class="feedback-all-correct">${currentProblem.runtimeOutput}</div>`;
+  if (compileSuccess && currentProblem) {
+    runtimeOutputDiv.textContent = currentProblem.runtimeOutput;
+  }
 }
